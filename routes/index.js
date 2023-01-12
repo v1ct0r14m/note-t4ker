@@ -29,10 +29,9 @@ router.post('/api/notes', (req, res) => {
 })
 
 router.delete('/api/notes/:id', (req, res) => {
-    res.send('delete request at /api/node/:id')
-    
-    
-
+    res.send('delete request at /api/node/:id') 
+    const newArray = notes.filter(note => note.id !=parseInt(req.params.id))
+    notes = newArray
     fs.writeFileSync('../db/db.json', JSON.stringify(notes))
     res.json(notes)
 })
