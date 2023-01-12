@@ -16,5 +16,13 @@
     "express": "^4.16.4"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v1ct0r14m/note-t4ker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/v1ct0r14m/note-t4ker/issues"
+  },
+  "homepage": "https://github.com/v1ct0r14m/note-t4ker#readme",
   "description": ""
 }
