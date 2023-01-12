@@ -1,4 +1,3 @@
-//const { Router } = require('express')
 const fs = require('fs')
 const path = require('path')
 const router = require('express').Router()
@@ -30,8 +29,8 @@ router.post('/api/notes', (req, res) => {
 
 router.delete('/api/notes/:id', (req, res) => {
     res.send('delete request at /api/node/:id') 
-    const newArray = notes.filter(note => note.id !=parseInt(req.params.id))
-    notes = newArray
+    const array = notes.filter(note => note.id !=parseInt(req.params.id))
+    notes = array
     fs.writeFileSync('../db/db.json', JSON.stringify(notes))
     res.json(notes)
 })
